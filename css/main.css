@@ -1,0 +1,104 @@
+@import url(fonts.css);
+
+.tictactoe {
+    width: 600px;
+    height: 600px;
+    background-color:  rgba(242,242,242,1);
+    margin: auto;
+    box-shadow: 0px 2px 2px #000;
+}
+
+.game_name {
+    text-align: center;
+    font-family: Speectral;
+    color: #1f3b08;
+    padding-top: 20px;
+}
+
+.game_estate {
+    display: inline;
+    margin-left: 270px;
+    color: rgba(86,179,161,1);
+}
+
+.game_player {
+    display: inline;
+    margin-left: 10px;
+    color: black;
+}
+
+.game_board {
+    margin: auto;
+    padding: 50px;
+    width: 600px;
+    height: 400px;
+    background-color:  rgba(86,179,161,1);
+}
+
+.game_table {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
+
+.game_row {
+    height: 100px;
+}
+
+.game_row {
+    border-bottom: rgba(176,197,160,.6) 7px solid;
+}
+
+.game_row:last-child {
+    border-bottom: none;
+}
+
+.game_cell {
+    width: 50px;
+    text-align: center;
+    font-family: Speectral;
+    font-size: 30px;
+    color: #1f3b08;
+}
+
+.game_cell {
+    border-right: rgba(176,197,160,.6) 7px solid;
+}
+
+.game_cell:last-child {
+    border-right: none;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: rgba(86,179,161,1);
+}
+
+a:hover {
+    color: #1f3b08;
+}
+
+.game_restart {
+    text-align: center;
+    padding-top: 20px;
+    font-family: Speectral;
+    font-size: 20px;
+}
+
+.winning {
+    color: blueviolet;
+    font-size: 40px;
+}
+
+.no_winning {
+    color: #1f3b08;
+    font-size: 30px;
+}
+
+.copyright {
+    text-align: right;
+    padding-right: 5px;
+    font-size: 10px;
+    font-style: italic;
+    
+}

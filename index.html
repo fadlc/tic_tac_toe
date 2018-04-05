@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tictactoe">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=divice-width, user-scalable=no, initial-scale=1, maximun-scale=1, minimun-scale=1">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" href="./css/fontello.css">
+    </head>
+    <body ng-controller="mainController">
+        <div class="tictactoe">
+            <h1 class="game_name">Tic Tac Toe game</h1>
+            <p class="game_estate">{{ model.estate }}</p><p class="game_player">{{ model.player }}</p>
+            <div class="game_board"  ng-cloak>
+                <tbody>
+                    <table class="game_table">
+                        <tr class="game_row" ng-repeat="row in model.board track by $index" >
+                            <td  class="game_cell" ng-repeat="cell in row track by $index" ng-click="model.fill($parent.$index, $index)">
+                                <span ng-class="{ 'winning': model.cellsWin($parent.$index, $index) }">{{ cell }}</span>
+                            </td>
+                        </tr>
+                    </table>
+                </tbody>
+            </div>
+            <h3 class="game_restart" ng-click="restart()"><a href="#">Restart Game</a></h3>
+            <p class="copyright">©2018-faDLC -- Félix A. De La Cruz</p>
+        </div>
+    </body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    <script src="./js/controllers.js"></script>
+</html> 
